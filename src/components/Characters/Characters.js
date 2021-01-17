@@ -42,7 +42,7 @@ const Characters = props => {
         const publicKey = `ba73c1557e66b8a55b0e96f5fd01e534`;
         const privateKey = `6052319c409e3777acee874a69c60d6d56952650`;
         const hash = md5(`${ts}${privateKey}${publicKey}`);
-        const URL = `http://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+        const URL = `https://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
 
         axios.get(URL)
             .then(response => {
