@@ -1,0 +1,69 @@
+.Toolbar {
+    width: 100%;
+    height: 12rem;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    
+    background-color:#272727;
+    color: #ffffff;
+
+    .Marvel {
+        background-color: #eb1d29;
+        font-weight: 700;
+        letter-spacing: -.3rem;
+        line-height: 3.8rem;
+
+        width: 15.1rem;
+        margin-bottom: .5rem;
+
+        display: flex;
+
+        animation: moveInLeft 1s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+    .Characters {
+        letter-spacing: 1.5rem;
+
+        animation: moveInRight 1s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
